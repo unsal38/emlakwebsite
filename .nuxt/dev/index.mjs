@@ -48,6 +48,20 @@ const _inlineRuntimeConfig = {
       "/__nuxt_error": {
         "cache": false
       },
+      "/examples/*": {
+        "redirect": {
+          "to": "/redirect-route",
+          "statusCode": 307
+        }
+      },
+      "/modify-headers-route": {
+        "headers": {
+          "x-magic-of": "nuxt and vercel"
+        }
+      },
+      "/spa": {
+        "ssr": false
+      },
       "/_nuxt/builds/meta/**": {
         "headers": {
           "cache-control": "public, max-age=31536000, immutable"
